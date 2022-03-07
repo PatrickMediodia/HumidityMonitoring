@@ -14,9 +14,5 @@
     else {
         $status = "NORMAL";
     }
-
-    //send email
-    include '../Email/sendEmailNotif.php';
-    
     echo $status;
 ?>

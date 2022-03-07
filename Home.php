@@ -97,15 +97,18 @@
         <div class="rcorners">
             <h1 style="padding:20px; color:#2E6CA4;"><strong>Logs</strong></h1>
 
-            <!-- humidity chart -->
+            <!-- humidity and temperature chart -->
             <div class="row">
+                
                 <div class="d-flex justify-content-center">
                     <div class="col-lg-6">
+                    <span class="smallHeading">Humidity</span><br>
                         <div class="row">
                             <div id="humidityChart" style="height: 300px;"></div>
                         </div>
                     </div>
                     <div class="col-lg-6">
+                    <span class="smallHeading">Temperature</span><br>
                         <div class="row">
                             <div id="temperatureChart" style="height: 300px;"></div>
                         </div>
@@ -139,9 +142,11 @@
                 <span style="color: red;"><strong>Red = High Humidity</strong></span>
             </div>
 
+            <!--  Update Email -->
+
             <hr>
             
-            <div style="padding:30px;"> <!--  Update Email -->
+            <div style="padding:30px;"> 
                 <form action="Email/updateEmail.php" method="POST">
                     <div class="row" style="padding-bottom:30px;">
                         <div class="col align-self-center">
@@ -159,10 +164,8 @@
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
-
 </body>
 
 <script>
@@ -218,8 +221,8 @@
         });
     }
     
-    //refresh chart every 5 seconds
-    setInterval(refreshData, 5000);
+    //refresh chart every second
+    setInterval(refreshData, 1000);
 </script>
 
 </html>

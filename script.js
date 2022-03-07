@@ -38,17 +38,17 @@ $(document).ready(function() {
     //refresh table every second
     setInterval(function() {
         table.ajax.reload(null, false); // user paging is not reset on reload
-    }, 5000);
+    }, 1000);
 
     getAverageRecords();
     getHumidityRange();
     updateEmailShown();
     updateDeviceStatus();
 
-    setInterval(getAverageRecords, 5000);
-    setInterval(getHumidityRange, 5000);
-    setInterval(updateEmailShown, 5000);
-    setInterval(updateDeviceStatus, 5000);
+    setInterval(getAverageRecords, 1000);
+    setInterval(getHumidityRange, 1000);
+    setInterval(updateEmailShown, 1000);
+    setInterval(updateDeviceStatus, 1000);
 });
 
 function getAverageRecords() {
@@ -97,7 +97,7 @@ function updateHumidifierStatus() {
             } 
             $('#dehumidifierStatus').html(dehumidifierStatus + data);
         }
-    });
+    });    
 }
 
 function updateDeviceStatus() {
@@ -111,8 +111,8 @@ function updateDeviceStatus() {
                 $('#currentHumidity').html("N/A");
             }
             else {
-                updateHumidifierStatus();
                 getCurrentHumidity();
+                updateHumidifierStatus();
             }
         }
     });

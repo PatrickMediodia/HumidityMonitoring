@@ -6,7 +6,7 @@ include_once('connects.php');
 $hum = $_GET['hum'];
 $temp = $_GET['temp'];
 
-//get high humidity
+//get low and high humidity
 $query = "SELECT * FROM humidity";
 $data =  mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($data); 
@@ -25,5 +25,7 @@ if($result) {
 else {
     echo "Error, Insert not successful";
 }
+
+include '../Email/sendEmailNotif.php'
 
 ?>

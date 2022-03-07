@@ -10,6 +10,8 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+include '../WebService/getDehumidifierStatus.php';
+
 //taken from getDehumidifierStatus.php
 if ($status != "NORMAL") {
     if ($status == "HIGH") {
