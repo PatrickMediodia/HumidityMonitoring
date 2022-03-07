@@ -140,20 +140,25 @@
             </div>
 
             <hr>
-
-            <form action="Email/updateEmail.php" method="POST">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <span id="emailNotification"></span>
+            
+            <div style="padding:30px;"> <!--  Update Email -->
+                <form action="Email/updateEmail.php" method="POST">
+                    <div class="row" style="padding-bottom:30px;">
+                        <div class="col align-self-center">
+                            <span class="smallHeading">Current email to be notified:</span>
+                            <span class="smallHeading" style="color:#2E6CA4; font-weight:bold;" id="emailNotification"></span>
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <input type="text" placeholder="New Email" name="updateEmail" value="" required>
+                    <div class="row justify-content-md-center">
+                        <div class="col-lg-4" style="padding-bottom:10px;">
+                            <input type="text" placeholder="New Email" name="updateEmail" value="" required>
+                        </div>
+                        <div class="col-lg-4">
+                            <input class="button" type="submit" name="submit" value="Set New Email">
+                        </div>
                     </div>
-                    <div class="col-lg-4">
-                        <input class="button" type="submit" name="submit" value="UPDATE">
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
 
         </div>
     </div>
